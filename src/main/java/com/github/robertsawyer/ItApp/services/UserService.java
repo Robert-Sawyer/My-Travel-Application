@@ -6,6 +6,7 @@ import com.github.robertsawyer.ItApp.dtos.RegistrationFormDTO;
 import com.github.robertsawyer.ItApp.dtos.UserDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,14 +19,17 @@ public class UserService {
 
     private UserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
+    private PasswordEncoder passwordEncoder;
+
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Transactional
     public void registerUser(RegistrationFormDTO form) {
         User user = Converters.convertToUser(form);  //Converters. bo metody są statyczne
-
+        user.setPassword(passwordEncoder.encode(user.getPassword())); //szyfrujemy hasło
         logger.info("Rejestracja usera: " + user);
             userRepository.save(user);
             logger.info("Zarejestrowany użytkownik: " + user);
