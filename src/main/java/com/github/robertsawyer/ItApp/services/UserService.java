@@ -1,6 +1,7 @@
 package com.github.robertsawyer.ItApp.services;
 
 import com.github.robertsawyer.ItApp.domain.model.User;
+import com.github.robertsawyer.ItApp.domain.model.UserDetails;
 import com.github.robertsawyer.ItApp.domain.repositories.UserRepository;
 import com.github.robertsawyer.ItApp.dtos.RegistrationFormDTO;
 import com.github.robertsawyer.ItApp.dtos.UserDTO;
@@ -32,6 +33,10 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(user.getPassword())); //szyfrujemy hasło
         logger.info("Rejestracja usera: " + user);
             userRepository.save(user);
+        UserDetails userDetails = new UserDetails();
+        userDetails.setId(user.getId());
+        user.setDetails(userDetails);
+        userRepository.save(user);
             logger.info("Zarejestrowany użytkownik: " + user);
     }
 
@@ -41,7 +46,7 @@ public class UserService {
             throw new IllegalArgumentException("Nazwa użytkownika musi być podana");
         }
         Optional<User> optionalUser = userRepository.findByLogin(login);
-        User user = optionalUser.orElse(null); //opakowujemy usera w obiekt optional.
+        User user = optionalUser.orElse(null);                          //opakowujemy usera w obiekt optional.
 
         if (user == null) {
             logger.info("Znaleziono usera dla nazwy: " + login);

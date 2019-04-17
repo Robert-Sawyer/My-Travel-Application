@@ -19,12 +19,18 @@ public class User {
     private Long id;
     @Column(unique = true, nullable = false)
     private String login;
+    @Column(unique = true, nullable = false)
+    private String email;
     @Column(nullable = false)
     private String password;
-    @Column(name = "first_name")
-    private String firstName;
-    @Column(name = "last_name")
-    private String lastName;
+//    @Column(name = "first_name")
+//    private String firstName;
+//    @Column(name = "last_name")
+//    private String lastName;
+
+    @OneToOne
+    @JoinColumn(referencedColumnName = "id", name = "id")
+    private UserDetails details;
 
     @Override
     public boolean equals(Object o) {

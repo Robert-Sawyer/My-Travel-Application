@@ -1,5 +1,6 @@
 package com.github.robertsawyer.ItApp.dtos;
 
+import com.github.robertsawyer.ItApp.domain.model.UserDetails;
 import lombok.*;
 
 @Data
@@ -8,8 +9,7 @@ import lombok.*;
 public class UserDTO {
 
     private String login;
-    private String firstName;
-    private String lastName;
+    private UserDetails details;
 
 
 }
