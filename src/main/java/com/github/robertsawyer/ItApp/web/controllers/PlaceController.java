@@ -40,6 +40,12 @@ public class PlaceController {
         return "redirect:/dashboard";                                         //jeśli kraj istnieje to zapisze miejsce i skieruje do kokpitu
     }
 
+    @GetMapping
+    public String showAllPlaces(Model model){
+        model.addAttribute("places", placeService.getAllPlaces());
+        return "places/listAllPlaces";
+    }
+
     private boolean checkCountryExists(AddPlaceDTO addPlaceDTO) {
         return placeService.checkCountry(addPlaceDTO.getCountry());         //jeśli kraj istnieje zwróci true, a jeśli nie to false
 
