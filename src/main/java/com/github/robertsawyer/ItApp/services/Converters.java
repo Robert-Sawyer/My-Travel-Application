@@ -1,8 +1,10 @@
 package com.github.robertsawyer.ItApp.services;
 
 import com.github.robertsawyer.ItApp.domain.model.Place;
+import com.github.robertsawyer.ItApp.domain.model.TravelPlan;
 import com.github.robertsawyer.ItApp.domain.model.User;
 import com.github.robertsawyer.ItApp.dtos.AddPlaceDTO;
+import com.github.robertsawyer.ItApp.dtos.AddTravelPlanDTO;
 import com.github.robertsawyer.ItApp.dtos.RegistrationFormDTO;
 import com.github.robertsawyer.ItApp.dtos.UserDTO;
 
@@ -35,4 +37,10 @@ public class Converters {
     }
 
 
+    public static TravelPlan convertToTravelPlan(AddTravelPlanDTO addTravelPlanDTO) {
+        TravelPlan travelPlan = new TravelPlan();
+        travelPlan.setName(addTravelPlanDTO.getName());
+        travelPlan.setDescription(addTravelPlanDTO.getDescription());
+        return travelPlan;
+    }
 }

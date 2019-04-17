@@ -16,4 +16,5 @@ public class PlanService {
         TravelPlan travelPlan = Converters.convertToTravelPlan(addTravelPlanDTO);
         travelPlanRepository.save(travelPlan);
     }
+    
 }
