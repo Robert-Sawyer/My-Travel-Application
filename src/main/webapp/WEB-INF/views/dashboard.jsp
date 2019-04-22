@@ -10,11 +10,51 @@
 <html>
 <head>
     <title>Twój Kokpit</title>
+    <link rel="stylesheet" href="../../media/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
+<jsp:include page="header.jsp"></jsp:include>
+<div class="sidenav">
+    <a href="#">Kokpit</a>
+    <a href="#">Plany</a>
+    <a href="#">Miejca</a>
+    <a href="#">Edytuj dane</a>
+    <a href="#">Kalendarz</a>
+</div>
+<div class="dashboardPageContainer">
+    <div class="dashboard-header m-4">
+        <div class="dashboard-menu">
+            <div class="menu-item border-dashed">
+                <a href="/places">
+                    <i class="far fa-plus-square icon-plus-square"></i>
+                    <span class="title">dodaj miejsce</span>
+                </a>
+            </div>
+            <div class="menu-item border-dashed">
+                <a href="/travel-plan">
+                    <i class="far fa-plus-square icon-plus-square"></i>
+                    <span class="title">dodaj plan</span>
+                </a>
+            </div>
+            <div class="menu-item border-dashed">
+                <a href="app/recipe/plan/add">
+                    <i class="far fa-plus-square icon-plus-square"></i>
+                    <span class="title">dodaj miejsce do planu</span>
+                </a>
+            </div>
+        </div>
 
-</header>
+        <div class="dashboard-alerts">
+            <div class="alert-item alert-light">
+                <i class="far icon-calendar fa-calendar-alt"></i>
+                <span class="font-weight-bold">Liczba planów: </span>
+            </div>
+        </div>
+    </div>
+</div>
 
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

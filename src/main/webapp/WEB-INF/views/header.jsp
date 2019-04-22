@@ -17,7 +17,7 @@ File>Settings>File Templates
         <ul class="nav nounderline text-uppercase">
 
             <li class="nav-item ml-4">
-                <a class="nav-link" href='<c:url value="" />'>O aplikacji</a>
+                <a class="nav-link" href='<c:url value="/dashboard" />'>O aplikacji</a>
             </li>
             <li class="nav-item ml-4">
                 <a class="nav-link" href='<c:url value="/contact" />'>Kontakt</a>
@@ -31,6 +31,21 @@ File>Settings>File Templates
             <li class="nav-item ml-4">
                 <a class="nav-link color-header" href='<c:url value="/register" />'>Rejestracja</a>
             </li>
+<%--            <c:choose>--%>
+<%--                <c:when test="${empty userId}">--%>
+<%--                    <li class="nav-item ml-4">--%>
+<%--                        <a class="nav-link color-header" href='<c:url value="/login" />'>Logowanie</a>--%>
+<%--                    </li>--%>
+<%--                    <li class="nav-item ml-4">--%>
+<%--                        <a class="nav-link color-header" href='<c:url value="/register" />'>Rejestracja</a>--%>
+<%--                    </li>--%>
+<%--                </c:when>--%>
+<%--                <c:otherwise>--%>
+<%--                    <li class="nav-item ml-4">--%>
+<%--                        <a class="nav-link color-header" href=''<c:url value="/dashboard"/>'>Kokipt</a>--%>
+<%--                    </li>--%>
+<%--                </c:otherwise>--%>
+<%--            </c:choose>--%>
         </ul>
     </nav>
 </header>
