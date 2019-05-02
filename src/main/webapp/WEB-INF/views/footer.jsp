@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-    <footer id="siteFooter" class="footer-section" style="bottom: auto;left: 0px; margin-left: 0px; width: 100%; min-width: 980px; position: absolute; top: 701px; height: 77px;">
+    <footer id="siteFooter" class="footer-section" style="bottom: auto;left: 0px; margin-left: 0px; width: 100%; min-width: 980px; position: absolute; bottom: 0; height: 77px;">
         <div id="SiteFooterscreenWidthBackground" class="fc3screenWidthBackground" style="left: 0;width: 100%;">
             <div class="fc3_bg"></div>
         </div>

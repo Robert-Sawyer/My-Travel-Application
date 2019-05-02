@@ -7,6 +7,8 @@
 --%>
 <%@ page isELIgnored="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Twój Kokpit</title>
@@ -17,41 +19,41 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="sidenav">
-    <a href="#">Kokpit</a>
-    <a href="#">Plany</a>
-    <a href="#">Miejca</a>
+    <a href='<c:url value="/dashboard" />'>Kokpit</a>
+    <a href='<c:url value="/travel-plan/listAllPlans" />'>Plany</a>
+    <a href='<c:url value="/places/listAllPlaces" />'>Miejsca</a>
     <a href="#">Edytuj dane</a>
-    <a href="#">Kalendarz</a>
+    <a href='<c:url value="/logout"/>'>Wyloguj</a>
 </div>
 <div class="dashboardPageContainer">
     <div class="dashboard-header m-4">
         <div class="dashboard-menu">
             <div class="menu-item border-dashed">
-                <a href="/places">
+                <a href="/places/add">
                     <i class="far fa-plus-square icon-plus-square"></i>
-                    <span class="title">dodaj miejsce</span>
+                    <span class="title">DODAJ NOWE MIEJSCE</span>
                 </a>
             </div>
             <div class="menu-item border-dashed">
-                <a href="/travel-plan">
+                <a href="/travel-plan/add">
                     <i class="far fa-plus-square icon-plus-square"></i>
-                    <span class="title">dodaj plan</span>
+                    <span class="title">DODAJ NOWY PLAN</span>
                 </a>
             </div>
             <div class="menu-item border-dashed">
-                <a href="app/recipe/plan/add">
+                <a href="/places/listAllPlaces">
                     <i class="far fa-plus-square icon-plus-square"></i>
-                    <span class="title">dodaj miejsce do planu</span>
+                    <span class="title">DODAJ MIEJSCE DO PLANU</span>
                 </a>
             </div>
         </div>
 
-        <div class="dashboard-alerts">
-            <div class="alert-item alert-light">
-                <i class="far icon-calendar fa-calendar-alt"></i>
-                <span class="font-weight-bold">Liczba planów: </span>
-            </div>
-        </div>
+<%--        <div class="dashboard-alerts">--%>
+<%--            <div class="alert-item alert-light">--%>
+<%--                <i class="far icon-calendar fa-calendar-alt"></i>--%>
+<%--                <span class="font-weight-bold">Liczba planów: </span>--%>
+<%--            </div>--%>
+<%--        </div>--%>
     </div>
 </div>
 
