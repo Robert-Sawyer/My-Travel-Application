@@ -101,19 +101,19 @@
             </div>
         </div>
         <div class="contactForm" style="left: 17px;width: 504px;position: absolute;top: 35px;height: 292px;">
-            <form method="post">
+            <form:form modelAttribute="mail" method="post">
                 <div class="styleForm" style="min-width: 180px;max-width: 980px;position: relative;width: 100%;">
                     <div>
-                        <input class="contactFormInput" type="text" name="name" placeholder="Imię"/>
-                        <input class="contactFormInput" type="text" name="email" placeholder="Email"/>
-                        <input class="contactFormInput" type="text" name="title" placeholder="Temat"/>
+                        <form:input class="contactFormInput" path="name" placeholder="Imię"/>
+                        <form:input class="contactFormInput" path="email" placeholder="Email"/>
+                        <form:input class="contactFormInput" path="title" placeholder="Temat"/>
                     </div>
                     <textarea class="fieldMessage" name="message" placeholder="Wiadomość"></textarea>
                     <div class="formButton">
                         <button class="buttonSend" type="submit">Wyślij</button>
                     </div>
                 </div>
-            </form>
+            </form:form>
         </div>
     </div>
 </div>
