@@ -3,10 +3,7 @@ package com.github.robertsawyer.ItApp.services;
 import com.github.robertsawyer.ItApp.domain.model.Place;
 import com.github.robertsawyer.ItApp.domain.model.TravelPlan;
 import com.github.robertsawyer.ItApp.domain.model.User;
-import com.github.robertsawyer.ItApp.dtos.AddPlaceDTO;
-import com.github.robertsawyer.ItApp.dtos.AddTravelPlanDTO;
-import com.github.robertsawyer.ItApp.dtos.RegistrationFormDTO;
-import com.github.robertsawyer.ItApp.dtos.UserDTO;
+import com.github.robertsawyer.ItApp.dtos.*;
 
 public class Converters {
 
@@ -21,6 +18,7 @@ public class Converters {
     public static User convertToUser(RegistrationFormDTO form) {
         User user = new User();
         user.setLogin(form.getLogin());
+        user.setEmail(form.getEmail());
         user.setPassword(form.getPassword());
 //        user.setFirstName(form.getFirstName());
 //        user.setLastName(form.getLastName());
@@ -29,10 +27,10 @@ public class Converters {
 
     public static Place convertToPlace(AddPlaceDTO addPlaceDTO) {       //przyjmuje dane z formularza w formie obiektu addPlaceDTO i konwertuje to na
         Place place = new Place();                                      //obiekt encji Place
-        place.setName(place.getName());
-        place.setCountry(place.getCountry());
-        place.setCity(place.getCity());
-        place.setDescription(place.getDescription());
+        place.setName(addPlaceDTO.getName());
+        place.setCountry(addPlaceDTO.getCountry());
+        place.setCity(addPlaceDTO.getCity());
+        place.setDescription(addPlaceDTO.getDescription());
         return place;
     }
 
@@ -41,6 +39,13 @@ public class Converters {
         TravelPlan travelPlan = new TravelPlan();
         travelPlan.setName(addTravelPlanDTO.getName());
         travelPlan.setDescription(addTravelPlanDTO.getDescription());
+        travelPlan.setIsPublic(addTravelPlanDTO.getIsPublic());
         return travelPlan;
+    }
+
+    public static Place convertFindPlaceDTOToPlace(FindPlaceDTO findPlaceDTO) {
+        Place place = new Place();
+        place.setName(findPlaceDTO.getName());
+        return place;
     }
 }

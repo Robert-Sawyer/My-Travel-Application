@@ -1,22 +1,17 @@
 package com.github.robertsawyer.ItApp.dtos;
 
 import com.github.robertsawyer.ItApp.domain.model.Place;
+import com.github.robertsawyer.ItApp.domain.model.TravelPlan;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AddTravelPlanDTO {
+public class AddPlaceToPlanDTO {
 
-
-    @NotBlank
-    private String name;
-    private String description;
-    private Boolean isPublic;
-
+    private Long planId;
+    private Long placeId;
 
 }
