@@ -32,12 +32,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordEncoder(passwordEncoder())                          //bo chcmy szyfrowac hasło
                 .usersByUsernameQuery("SELECT login, password, true FROM users WHERE login = ?")              //sluzy do procesu logowania
                 .authoritiesByUsernameQuery("SELECT login, 'ROLE_USER' FROM users WHERE login = ?");  //będzie zwracało info o tym, jakie prawa ma user
+
+//        auth.inMemoryAuthentication()
+//            .withUser("user").password(passwordEncoder().encode("pass")).roles("USER")
+//            .and()
+//            .withUser("admin").password(passwordEncoder().encode("pass")).roles("ADMIN");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/register").permitAll()               //dostep dla wszystkich
+                .antMatchers("/").permitAll()
+                .antMatchers("/publicPlans").permitAll()
                 .antMatchers("/login").anonymous()               // dostęp tylko dla niezalogowanych
                 .antMatchers("/user", "/user/**").hasRole("USER")           //dostęp do tych scieżek tylko dla userów
                 .antMatchers("/admin", "/admin/**").hasRole("ADMIN")     //tylko dla adminów
