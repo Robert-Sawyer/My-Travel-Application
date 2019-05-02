@@ -26,16 +26,23 @@
 <body>
 
 <jsp:include page="../header.jsp"></jsp:include>
-
-<div class="pageContainer">
+<div class="sidenav">
+    <a href='<c:url value="/dashboard"/>'>Kokpit</a>
+    <a href='<c:url value="/travel-plan/listAllPlans"/>'>Plany</a>
+    <a href='<c:url value="/places/listAllPlaces"/>'>Miejsca</a>
+    <a href="#">Edytuj dane</a>
+    <a href='<c:url value="/logout"/>'>Wyloguj</a>
+</div>
+<div class="pageContainer" style="background-size: 100%; background-image: url(/media/images/P4206676)">
     <div class="registerPageTitle">
         <h2>DODAJ PLAN PODRÓŻY</h2>
     </div>
-    <div class="formContainer" style="margin-top: 20px;">
+    <div class="formContainer" style="margin-top: 20px; background-color: antiquewhite; opacity: 0.83;">
         <form:form method="post" modelAttribute="travelPlan">
             <form:errors path="*"/><br>
             Nazwa planu: <form:input path="name"/><br>
             Opis: <form:input path="description"/><br>
+            Czy chcesz ustawić plan jako publiczny? <form:checkbox path="isPublic"/>
             <input type="submit" value="Dodaj">
 
         </form:form>
