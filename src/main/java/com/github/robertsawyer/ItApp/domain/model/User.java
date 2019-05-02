@@ -3,13 +3,13 @@ package com.github.robertsawyer.ItApp.domain.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "users")
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
@@ -23,10 +23,9 @@ public class User {
     private String email;
     @Column(nullable = false)
     private String password;
-//    @Column(name = "first_name")
-//    private String firstName;
-//    @Column(name = "last_name")
-//    private String lastName;
+
+    @OneToMany(mappedBy = "user")
+    private List<TravelPlan> plans;
 
     @OneToOne
     @JoinColumn(referencedColumnName = "id", name = "id")
