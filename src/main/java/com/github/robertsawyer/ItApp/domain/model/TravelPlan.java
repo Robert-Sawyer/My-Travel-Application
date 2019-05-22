@@ -16,16 +16,23 @@ public class TravelPlan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false)
     private String name;
+
     @Column(nullable = true)
     private String description;
+
     @ManyToMany
     private List<Place> places;
 
     @ManyToOne
     private User user;
 
+    @Column(nullable = true)
     private String articles;
+
+    @Column(nullable = false)
     private Boolean isPublic;
 
 
