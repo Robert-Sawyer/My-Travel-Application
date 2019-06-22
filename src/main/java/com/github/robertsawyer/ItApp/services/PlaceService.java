@@ -3,12 +3,18 @@ package com.github.robertsawyer.ItApp.services;
 import com.github.robertsawyer.ItApp.domain.model.Place;
 import com.github.robertsawyer.ItApp.domain.repositories.PlaceRepository;
 import com.github.robertsawyer.ItApp.dtos.AddPlaceDTO;
+import com.github.robertsawyer.ItApp.dtos.FindPlaceDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.management.Query;
+import java.util.List;
 
 @Service
 public class PlaceService {
 
+    @Autowired
     private PlaceRepository placeRepository;
 
 
@@ -34,4 +40,19 @@ public class PlaceService {
         Place place = Converters.convertToPlace(addPlaceDTO);               //obiekt encji Place i otrzymane Place zapisujemy przy pomocy placeRepository
         placeRepository.save(place);                                        //do bazy danych
     }
+
+    public List<Place> getAllPlaces(){
+        List<Place> places = placeRepository.findAll();
+        return places;
+    }
+
+    public Place findByName(FindPlaceDTO findPlaceDTO) {
+        Place place = Converters.convertFindPlaceDTOToPlace(findPlaceDTO);
+        return placeRepository.findByPlaceName(place);
+    }
+
+//    public List<Place> getNoAddedPlaces(){
+//        List<Place> places = placeRepository.findNoAddedPlaces();
+//        return places;
+//    }
 }
