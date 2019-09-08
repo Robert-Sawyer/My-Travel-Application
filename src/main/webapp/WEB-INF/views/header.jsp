@@ -1,13 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%--
-File>Settings>File Templates
-  User: michal
-  Date: 2019-03-18
-  Time: 07:27
---%>
 
-<%-- <%@ include file="header.jsp" %> --%>
 <header class="page-header">
     <nav class="navbar navbar-expand-lg justify-content-around">
         <a href="/" class="navbar-brand main-logo">
