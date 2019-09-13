@@ -39,7 +39,7 @@ public class Converters {
         TravelPlan travelPlan = new TravelPlan();
         travelPlan.setName(addTravelPlanDTO.getName());
         travelPlan.setDescription(addTravelPlanDTO.getDescription());
-        travelPlan.setIsPublic(addTravelPlanDTO.getIsPublic());
+        travelPlan.setIsPublic(addTravelPlanDTO.getPublic());
         return travelPlan;
     }
 
