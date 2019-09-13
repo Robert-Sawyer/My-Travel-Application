@@ -7,8 +7,6 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "places")
-@Getter
-@Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
