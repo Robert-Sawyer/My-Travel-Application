@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.management.Query;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -49,6 +50,10 @@ public class PlaceService {
     public Place findByName(FindPlaceDTO findPlaceDTO) {
         Place place = Converters.convertFindPlaceDTOToPlace(findPlaceDTO);
         return placeRepository.findByPlaceName(place);
+    }
+
+    public void add(Place place) {
+        placeRepository.save(place);
     }
 
 //    public List<Place> getNoAddedPlaces(){
