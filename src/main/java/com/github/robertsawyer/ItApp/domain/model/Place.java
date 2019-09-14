@@ -7,9 +7,9 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "places")
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
+//@ToString
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class Place {
 
     @Id
@@ -23,6 +23,16 @@ public class Place {
     private String city;
     @Column
     private String description;
+
+    public Place() {
+    }
+
+    public Place(String name, String country, String city, String description) {
+        this.name = name;
+        this.country = country;
+        this.city = city;
+        this.description = description;
+    }
 
     public Long getId() {
         return id;
@@ -62,6 +72,17 @@ public class Place {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Place{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 
     @Override
