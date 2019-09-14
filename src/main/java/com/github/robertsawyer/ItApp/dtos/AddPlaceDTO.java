@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotBlank;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class AddPlaceDTO {
 
     @NotBlank
@@ -17,6 +17,16 @@ public class AddPlaceDTO {
     private String country;
     private String city;
     private String description;
+
+    public AddPlaceDTO() {
+    }
+
+    public AddPlaceDTO(@NotBlank String name, @NotBlank String country, String city, String description) {
+        this.name = name;
+        this.country = country;
+        this.city = city;
+        this.description = description;
+    }
 
     public String getName() {
         return name;
