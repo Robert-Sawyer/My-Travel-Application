@@ -13,8 +13,7 @@ public interface PlaceRepository extends JpaRepository<Place, Long> {
 
     @Query(value = "SELECT name FROM countries WHERE name = ?",
     nativeQuery = true)
-    String checkCountry(String country);                        //dostarczam nazwę kraju z formularza i szukam takiego w bazie
-
+    String checkCountry(String country);     //dostarczam nazwę kraju z formularza i szukam takiego w bazie
 
 
     @Query(value = "SELECT * FROM places WHERE name = ?",

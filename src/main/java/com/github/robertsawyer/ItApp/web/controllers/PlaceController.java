@@ -1,11 +1,9 @@
 package com.github.robertsawyer.ItApp.web.controllers;
 
 import com.github.robertsawyer.ItApp.domain.model.Place;
-import com.github.robertsawyer.ItApp.domain.model.TravelPlan;
 import com.github.robertsawyer.ItApp.dtos.AddPlaceDTO;
 import com.github.robertsawyer.ItApp.dtos.AddPlaceToPlanDTO;
 import com.github.robertsawyer.ItApp.dtos.FindPlaceDTO;
-import com.github.robertsawyer.ItApp.dtos.TravelPlanDTO;
 import com.github.robertsawyer.ItApp.services.PlaceService;
 import com.github.robertsawyer.ItApp.services.PlanService;
 import org.slf4j.Logger;
