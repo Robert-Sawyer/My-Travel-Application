@@ -1,6 +1,7 @@
 package com.github.robertsawyer.ItApp.web.controllers;
 
 import com.github.robertsawyer.ItApp.dtos.AddTravelPlanDTO;
+import com.github.robertsawyer.ItApp.dtos.EditTravelPlanDTO;
 import com.github.robertsawyer.ItApp.dtos.FindPlaceDTO;
 import com.github.robertsawyer.ItApp.services.PlaceService;
 import com.github.robertsawyer.ItApp.services.PlanService;
@@ -48,5 +49,12 @@ public class TravelPlanController {
         model.addAttribute("plans", planService.getAllTravelPlans());
 //        model.addAttribute("place", planService.getPlacesList());
         return "travels/listAllPlans";
+    }
+
+    @GetMapping("/editPlan")
+    public String editTravelPlan(Long id, Model model) {
+        EditTravelPlanDTO editPlanDTO = planService.getDTOForEdit(id);
+        model.addAttribute("editPlan", editPlanDTO);
+        return "travels/editPlan";
     }
 }
