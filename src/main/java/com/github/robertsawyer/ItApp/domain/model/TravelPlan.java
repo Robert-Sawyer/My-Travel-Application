@@ -33,6 +33,24 @@ public class TravelPlan {
     @Column(nullable = false)
     private Boolean isPublic;
 
+    private Double budget;
+
+    public Boolean getPublic() {
+        return isPublic;
+    }
+
+    public void setPublic(Boolean aPublic) {
+        isPublic = aPublic;
+    }
+
+    public Double getBudget() {
+        return budget;
+    }
+
+    public void setBudget(Double budget) {
+        this.budget = budget;
+    }
+
     public Long getId() {
         return id;
     }

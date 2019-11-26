@@ -33,7 +33,7 @@
     <a href="#">Edytuj dane</a>
     <a href='<c:url value="/logout"/>'>Wyloguj</a>
 </div>
-<div class="pageContainer" style="background-size: 100%; background-image: url(/media/images/P4206676)">
+<div class="pageContainer">
     <div class="registerPageTitle">
         <h2>DODAJ PLAN PODRÓŻY</h2>
     </div>
@@ -42,6 +42,7 @@
             <form:errors path="*"/><br>
             Nazwa planu: <form:input path="name"/><br>
             Opis: <form:input path="description"/><br>
+            Ustaw maksymalny dostępny budżet: <form:input path="budget"/><br>
             Czy chcesz ustawić plan jako publiczny? <form:checkbox path="isPublic"/>
             <input type="submit" value="Dodaj">
 

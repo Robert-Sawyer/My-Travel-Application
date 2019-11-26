@@ -17,6 +17,7 @@ public class AddTravelPlanDTO {
     private String name;
     private String description;
     private Boolean isPublic;
+    private Double budget;
 
     public String getName() {
         return name;
@@ -40,5 +41,13 @@ public class AddTravelPlanDTO {
 
     public void setPublic(Boolean aPublic) {
         isPublic = aPublic;
+    }
+
+    public Double getBudget() {
+        return budget;
+    }
+
+    public void setBudget(Double budget) {
+        this.budget = budget;
     }
 }
