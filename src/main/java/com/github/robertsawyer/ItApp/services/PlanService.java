@@ -6,8 +6,10 @@ import com.github.robertsawyer.ItApp.domain.model.User;
 import com.github.robertsawyer.ItApp.domain.repositories.PlaceRepository;
 import com.github.robertsawyer.ItApp.domain.repositories.TravelPlanRepository;
 import com.github.robertsawyer.ItApp.domain.repositories.UserRepository;
+import com.github.robertsawyer.ItApp.dtos.AddExpenseDTO;
 import com.github.robertsawyer.ItApp.dtos.AddPlaceToPlanDTO;
 import com.github.robertsawyer.ItApp.dtos.AddTravelPlanDTO;
+import com.github.robertsawyer.ItApp.dtos.EditTravelPlanDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,5 +68,12 @@ public class PlanService {
         return publicPlans;
     }
 
+    public void updateBudget(AddExpenseDTO addExpenseDTO) {
 
+    }
+
+    public EditTravelPlanDTO getDTOForEdit(Long id) {
+
+        return null;
+    }
 }
