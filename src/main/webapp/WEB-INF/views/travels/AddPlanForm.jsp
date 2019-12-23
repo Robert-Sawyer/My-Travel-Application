@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<jsp:include page="../header.jsp"></jsp:include>
+<jsp:include page="../main/header.jsp"></jsp:include>
 <div class="sidenav">
     <a href='<c:url value="/dashboard"/>'>Kokpit</a>
     <a href='<c:url value="/travel-plan/listAllPlans"/>'>Plany</a>
@@ -49,7 +49,7 @@
         </form:form>
     </div>
 </div>
-<jsp:include page="../footer.jsp"></jsp:include>
+<jsp:include page="../main/footer.jsp"></jsp:include>
 
 </body>
 </html>

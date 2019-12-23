@@ -26,25 +26,25 @@ public class RegistrationController {
     @GetMapping
     public String prepareRegistrationForm(Model model) {
         model.addAttribute("registrationForm", new RegistrationFormDTO()); //mogłoby być tylko new RFDTO bez stringa (zielony tekst) (tak samo niżej zamiast model attribute, a wtedy w widoku jsp trzeba zmienić modelattribute na rfdto
-        return "registration-page";
+        return "main/registration-page";
     }
 
     @PostMapping
     public String processRegistration(@Valid @ModelAttribute("registrationForm") RegistrationFormDTO form, BindingResult result){
         if (result.hasErrors()){
-            return "registration-page";
+            return "main/registration-page";
         }
         if(!checkPasswordEquality(form)){
             result.rejectValue("password", null, "Hasło i powtórzone hasło niezgodne");
-            return "registration-page";
+            return "main/registration-page";
         }
         if(!checkIsUsernameIsAvailable(form)){
             result.rejectValue("login", null, "Nazwa użytkownika już zajęta");
-            return "registration-page";
+            return "main/registration-page";
         }
         //Konwersja rfDTO na user encja i wywołąnie userrepositiry.save(...);
         userService.registerUser(form);
-        return "redirect:/home";
+        return "redirect:/main/ome";
     }
 
     private boolean checkIsUsernameIsAvailable(RegistrationFormDTO form) {

@@ -22,7 +22,7 @@
 
 </head>
 <body>
-<jsp:include page="../header.jsp"></jsp:include>
+<jsp:include page="../main/header.jsp"></jsp:include>
 
 <div class="PageContainer">
     <div class="pageTitle" style="margin-top: 20px; margin-left: 200px;">
@@ -56,7 +56,7 @@
 </div>
 
 
-<jsp:include page="../footer.jsp"></jsp:include>
+<jsp:include page="../main/footer.jsp"></jsp:include>
 
 </body>
 </html>
