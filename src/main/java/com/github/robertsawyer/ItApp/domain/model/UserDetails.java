@@ -20,6 +20,8 @@ public class UserDetails {
     private String lastName;
     private String city;
     private String country;
+    @OneToOne
+    private User user;
 
     public Long getId() {
         return id;
@@ -59,5 +61,13 @@ public class UserDetails {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
