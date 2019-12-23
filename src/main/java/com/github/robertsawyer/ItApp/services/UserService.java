@@ -3,6 +3,7 @@ package com.github.robertsawyer.ItApp.services;
 import com.github.robertsawyer.ItApp.domain.model.User;
 import com.github.robertsawyer.ItApp.domain.model.UserDetails;
 import com.github.robertsawyer.ItApp.domain.repositories.UserRepository;
+import com.github.robertsawyer.ItApp.dtos.EditUserDTO;
 import com.github.robertsawyer.ItApp.dtos.RegistrationFormDTO;
 import com.github.robertsawyer.ItApp.dtos.UserDTO;
 import org.slf4j.Logger;
@@ -46,10 +47,13 @@ public class UserService {
             logger.info("Zarejestrowany użytkownik: " + user);
     }
 
-    public void editUserData() {
-
+    public void editUserData(EditUserDTO editUserDTO) {
+        User loggedUser = getLoggedUser();
+        UserDetails details = new UserDetails();
+        details.setUser(loggedUser);
+        details.setFirstName(editUserDTO.getFirstName());
+        details.setLastName(editUserDTO.getLastName());
     }
-
 
     public UserDTO findUser(String login) {
         if (login == null) {
