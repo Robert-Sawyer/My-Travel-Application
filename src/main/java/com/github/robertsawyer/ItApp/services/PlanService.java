@@ -72,6 +72,13 @@ public class PlanService {
 
     }
 
+    public void editPlan(EditTravelPlanDTO edit){
+        TravelPlan plan = travelPlanRepository.findById(edit.getPlanId()).get();
+        plan.setName(edit.getName());
+        plan.setDescription(edit.getDescription());
+        plan.setIsPublic(edit.getPublic());
+        travelPlanRepository.save(plan);
+    }
     public EditTravelPlanDTO getDTOForEdit(Long id) {
 
         return null;
