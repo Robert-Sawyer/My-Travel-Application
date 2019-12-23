@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class EditTravelPlanDTO {
 
+    private Long planId;
+
     private String name;
 
     private String description;
@@ -14,6 +16,14 @@ public class EditTravelPlanDTO {
     private Double budget;
 
     private Boolean isPublic;
+
+    public Long getPlanId() {
+        return planId;
+    }
+
+    public void setPlanId(Long planId) {
+        this.planId = planId;
+    }
 
     public String getName() {
         return name;
