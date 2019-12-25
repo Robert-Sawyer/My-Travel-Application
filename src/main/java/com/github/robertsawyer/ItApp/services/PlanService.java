@@ -79,8 +79,8 @@ public class PlanService {
         plan.setIsPublic(edit.getPublic());
         travelPlanRepository.save(plan);
     }
-    public EditTravelPlanDTO getDTOForEdit(Long id) {
-
-        return null;
-    }
+//    public EditTravelPlanDTO getDTOForEdit(Long id) {
+//
+//        return null;
+//    }
 }

@@ -53,8 +53,8 @@ public class TravelPlanController {
 
     @GetMapping("/editPlan")
     public String editTravelPlanForm(Long id, Model model) {
-        EditTravelPlanDTO editPlanDTO = planService.getDTOForEdit(id);
-        model.addAttribute("editPlan", editPlanDTO);
+//        EditTravelPlanDTO editPlanDTO = planService.getDTOForEdit(id);
+        model.addAttribute("editPlan", new EditTravelPlanDTO());
         return "travels/editPlan";
     }
 
