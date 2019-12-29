@@ -47,12 +47,16 @@ public class UserService {
             logger.info("Zarejestrowany użytkownik: " + user);
     }
 
+    @Transactional
     public void editUserData(EditUserDTO editUserDTO) {
         User loggedUser = getLoggedUser();
-        UserDetails details = new UserDetails();
-        details.setUser(loggedUser);
-        details.setFirstName(editUserDTO.getFirstName());
-        details.setLastName(editUserDTO.getLastName());
+        UserDetails details = new UserDetails(
+                editUserDTO.getFirstName(),
+                editUserDTO.getLastName(),
+                editUserDTO.getCity(),
+                editUserDTO.getCountry());
+        loggedUser.setDetails(details);
+        userRepository.save(loggedUser);
     }
 
     public UserDTO findUser(String login) {
