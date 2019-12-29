@@ -10,6 +10,8 @@ public class EditUserDTO {
     private Long userId;
     private String firstName;
     private String lastName;
+    private String city;
+    private String country;
     private String email;
 
     public Long getUserId() {
@@ -42,5 +44,21 @@ public class EditUserDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }
