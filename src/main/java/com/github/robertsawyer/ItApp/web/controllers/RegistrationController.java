@@ -44,7 +44,7 @@ public class RegistrationController {
         }
         //Konwersja rfDTO na user encja i wywołąnie userrepositiry.save(...);
         userService.registerUser(form);
-        return "redirect:/main/ome";
+        return "redirect:/main/home";
     }
 
     private boolean checkIsUsernameIsAvailable(RegistrationFormDTO form) {
