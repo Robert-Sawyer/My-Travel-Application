@@ -25,9 +25,9 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<TravelPlan> plans;
 
-    @OneToOne
-    @JoinColumn(referencedColumnName = "id", name = "id")
-    private UserDetails details;
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "detailsId", nullable = false)
+    private UserDetails userDetails;
 
     public Long getId() {
         return id;
@@ -70,11 +70,11 @@ public class User {
     }
 
     public UserDetails getDetails() {
-        return details;
+        return userDetails;
     }
 
     public void setDetails(UserDetails details) {
-        this.details = details;
+        this.userDetails = details;
     }
 
     @Override
