@@ -9,8 +9,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "user_details")
-@NoArgsConstructor
-@AllArgsConstructor
 public class UserDetails {
 
     @Id
@@ -20,8 +18,19 @@ public class UserDetails {
     private String lastName;
     private String city;
     private String country;
-    @OneToOne
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "userDetails")
     private User user;
+
+    public UserDetails() {
+    }
+
+    public UserDetails(String firstName, String lastName, String city, String country) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.city = city;
+        this.country = country;
+    }
 
     public Long getId() {
         return id;
