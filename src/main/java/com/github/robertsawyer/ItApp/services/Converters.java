@@ -10,8 +10,6 @@ public class Converters {
     public static UserDTO convertToUserDTO(User user) {
         UserDTO userDTO = new UserDTO();
         userDTO.setLogin(user.getLogin());
-//        userDTO.setFirstName(user.getFirstName());
-//        userDTO.setLastName(user.getLastName());
         return userDTO;
     }
 
@@ -20,8 +18,6 @@ public class Converters {
         user.setLogin(form.getLogin());
         user.setEmail(form.getEmail());
         user.setPassword(form.getPassword());
-//        user.setFirstName(form.getFirstName());
-//        user.setLastName(form.getLastName());
         return user;
     }
 
