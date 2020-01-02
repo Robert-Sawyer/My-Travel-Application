@@ -30,8 +30,8 @@ public class UserService {
     }
 
     public User getLoggedUser() {
-        String username = SecurityContextHolder.getContext().getAuthentication().getName();
-        return userRepository.findFirstByUsername(username).orElse(null);
+        String login = SecurityContextHolder.getContext().getAuthentication().getName();
+        return userRepository.findFirstByLogin(login).orElse(null);
     }
 
     @Transactional
