@@ -1,11 +1,12 @@
 /*<<< === STRONA GŁÓWNA === >>>*/
+
 .pageContainer {
     width: 100%;
 }
 
 .pageContent{
     background-color: antiquewhite;
-    margin-left: 0px;
+    margin-left: 0;
     /*width: 100%;*/
     min-width: 980px;
     position: absolute;
@@ -13,35 +14,92 @@
     height: 100%;
 }
 
+/*<<< === REJESTRACJA I LOGOWANIE === >>>*/
+
+.registerPageTitle{
+    width: 220px;
+    height: 80px;
+    margin-top: 15px;
+    padding-top: 20px;
+    color: indianred;
+    /*margin: 0 auto;*/
+    position: center;
+    text-align: center;
+}
+
+.formContainer{
+    width: 230px;
+    padding: 10px;
+    border-radius: 20px;
+    position: center;
+    margin: 0 auto;
+}
+
 /*<<< === HEADER === >>>*/
+
+.pageHeader{
+    background-color: khaki;
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    min-width: 980px;
+    top: 0;
+    height: 108px;
+}
+
+#headerLogo{
+    width: 27%;
+    margin-left: 0;
+    text-align: center;
+    float: left;
+}
+
+#mainLogo{
+    height: 82px;
+    /*width: 550px;*/
+    /*left: 200px;*/
+}
+
+.logoText{
+    font-size: 30px;
+    position: center;
+    text-align: center;
+    padding-top: 17px;
+}
+
+#headerTopMenu{
+    float: left;
+}
+
+#headerMenuList{
+    list-style: none;
+}
+
+.headerMenuListItem{
+    display: inline-block;
+}
 
 
 /*<<< === FOOTER === >>>*/
 
-#siteFooter{
+.pageFooter{
     width: 100%;
     height: 77px;
     min-width: 980px;
     background-color: rgba(0, 0, 0, 1);
-    margin: 0;
-    outline: 0;
-    vertical-align: baseline;
     bottom: 0;
     position: absolute;
-    /*bottom: auto;*/
-    left: 0;
-    /*top: 927px;*/
+}
+
+#footerContainer{
+    /*margin-top: 23px;*/
+    height: 100%;
 }
 
 #copyright{
-    left: 0;
-    /*top: 29px;*/
-    position: absolute;
-    height: 25px;
-}
-
-#copyrightPar{
     color: white;
+    margin-top: 23px;
     font-weight: bold;
     font-size: 16px;
     text-align: center;
@@ -49,22 +107,19 @@
 
 #links{
     /*margin-left: calc((100% - 980px) * 0.5);*/
-    width: 300px;
+    width: 250px;
     right: 0;
+    top: 26px;
+    position: absolute;
 }
 
 #socialMediaList{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    white-space: nowrap;
     list-style: none;
 }
 
 .socialMediaItem{
     width: 21px;
     height: 21px;
-    margin-bottom: 0;
     margin-right: 13px;
     display: inline-block;
 }
@@ -75,8 +130,6 @@
 
 .socialMediaImageContainer{
     position: absolute;
-    width: 21px;
-    height: 21px;
 }
 
 .socialMediaImageContainer img {
@@ -87,20 +140,94 @@
 
 /*<<< === KOKPIT === >>>*/
 
-
-
-.c2{
-    background-color: black;
+#dashboardPageContent{
+    top: 108px;
+    left: 160px;
+    right: 0;
+    /*background-color: antiquewhite;*/
+    margin-left: 0;
+    min-width: 980px;
+    position: absolute;
+    height: 100%;
+    /*background-image: url(/media/images/P4206675);*/
+    background-size: 100%;
 }
-.p2bg{
+
+.dashboardMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.dashboardMenu .menuItem {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-right: 50px;
+    padding: 15px;
+    border: 2px solid black;
+    background-color: cornsilk;
+    opacity: 0.5;
+    border-radius: 30px;
+}
+
+.dashboardMenu .menuItem a {
+    color: #818181;
+}
+
+.dashboardMenu .menuItem:last-child {
+    margin-right: 0;
+}
+
+.dashboardMenu .menuItem .title {
+    display: block;
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px;
+    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 108px;
+    bottom: 77px;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    float: left;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/*<<< === FORMULARZ KONTAKTOWY === >>>*/
+
+.contactSmallContainer{
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    margin-left: calc((100% - 980px) / 2);
+    width: 980px;
 }
 
-.p2inlineContent{
+.contactContent{
     position: absolute;
     top: 0;
     right: 0;
@@ -113,6 +240,10 @@
     max-height: 2000px;
     width: 0 !important;
     min-width: 0 !important;
+    left: 546px;
+    position: absolute;
+    top: 35px;
+    height: 292px;
 }
 
 .vl1line{
@@ -122,36 +253,13 @@
     height: 100%;
 }
 
-.txtNew{
-    word-wrap: break-word;
-    text-align: start;
-    margin-left: calc((100% - 980px) * 0.5);
-}
-
-.font8{
-    font-size: 16px;
-    line-height: 2em;
-    font-family: tahoma,tahoma-w01-regular,tahoma-w02-regular,tahoma-w10-regular,tahoma-w15--regular,tahoma-w99-regular,sans-serif;
-    color: #FFFFFF;
-}
-
-.color17{
-    color: #EB4A3E;
-}
-
-.lbiconsContainer{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    white-space: nowrap;
-}
-
-.lbiconsContainer > li:last-child{
-    margin: 0 !important;
-}
-
 .contactForm{
     margin-left: calc((100% - 980px) * 0.5);
+    left: 17px;
+    width: 504px;
+    position: absolute;
+    top: 35px;
+    height: 292px;
 }
 
 .fieldMessage{
@@ -183,178 +291,37 @@
     color: #000000;
     cursor: pointer;
     margin: 0;
-
     grid-column: 3;
     grid-row: 1/span 1;
     justify-self: end;
 }
 
-
-#mainLogo{
-    height: 82px;
-    width: 550px;
-    left: 200px;
+.color17{
+    color: #EB4A3E;
 }
 
-.logoText{
-    font-size: 30px;
-    position: center;
-    text-align: center;
-    padding-top: 17px;
-}
-
-.page-header{
-    background-color: khaki;
+.c2{
+    background-color: black;
+    left: 86px;
+    width: 125px;
     position: absolute;
-    left: 0px;
-    margin-left: 0px;
+    top: 4px;
+    height: 32px;
+}
+
+.lbiconsContainer{
+    position: absolute;
     width: 100%;
-    min-width: 980px;
-    top: 0px;
-    height: 108px;
-}
-
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 108px; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-}
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-/* Style page content */
-.main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
-}
-
-.registerPageTitle{
-    width: 220px;
-    height: 80px;
-    margin-top: 15px;
-    padding-top: 20px;
-    color: indianred;
-    margin: 0 auto;
-    position: center;
-    text-align: center;
-}
-
-.formContainer{
-    width: 230px;
-    padding: 10px;
-    border-radius: 20px;
-    position: center;
-    margin: 0 auto;
-}
-
-/*Dashboard*/
-
-#dashboardPageContent{
-    top: 108px;
-    left: 160px;
-    right: 0;
-    /*background-color: antiquewhite;*/
-    margin-left: 0px;
-    min-width: 980px;
-    position: absolute;
     height: 100%;
-    /*background-image: url(/media/images/P4206675);*/
-    background-size: 100%;
+    white-space: nowrap;
 }
 
-.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-}
-.dashboard-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 100px;
-}
-.dashboard-menu .menu-item {
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    margin-right: 50px;
-    padding: 15px;
-    border: 2px solid black;
-    background-color: cornsilk;
-    opacity: 0.5;
-    border-radius: 30px;
-}
-.dashboard-menu .menu-item a {
-    color: #818181;
-}
-.dashboard-menu .menu-item:last-child {
-    margin-right: 0;
-}
-.dashboard-menu .menu-item .title {
-    display: block;
-    padding-top: 10px;
-    font-size: 30px;
-    font-weight: bold;
+.lbiconsContainer > li:last-child{
+    margin: 0 !important;
 }
 
-.dashboard-alerts {
-    margin-left: 50px;
-    width: 70%;
-}
-.alert-item {
-    padding: 10px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
-.alert-item span {
-    margin-left: 15px;
-}
-.alert-info {
-    background: #fff;
-    border: 1px dashed deepskyblue;
-    color: deepskyblue;
-}
+/*====================================*/
 
-.alert-light {
-    background: #fff;
-    border: 1px dashed yellowgreen;
-    color: yellowgreen;
-}
-.icon-plus-square {
-    font-size: 3.5rem;
-}
-
-.dashboard-content {
-    margin-top: 20px;
-}
-.dashboard-content-title {
-    font-size: 1.2rem;
-    text-align: center;
-    font-weight: bold;
-    margin: 20px 0;
-}
-.dashboard-content-title span {
-    color: forestgreen;
-}
 
 /*Strona główna - karuzela*/
 
@@ -400,6 +367,85 @@
     top: 25px;
     padding-top: 10px;
 }
+
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0 10px;
+}
+
+
+/*.txtNew{*/
+/*    word-wrap: break-word;*/
+/*    text-align: start;*/
+/*    margin-left: calc((100% - 980px) * 0.5);*/
+/*    left: 572px;*/
+/*    width: 336px;*/
+/*    position: absolute;*/
+/*    pointer-events: none;*/
+/*    top: 35px;*/
+/*}*/
+
+/*.font8{*/
+/*    font-size: 16px;*/
+/*    line-height: 2em;*/
+/*    font-family: tahoma,tahoma-w01-regular,tahoma-w02-regular,tahoma-w10-regular,tahoma-w15--regular,tahoma-w99-regular,sans-serif;*/
+/*    color: #FFFFFF;*/
+/*    line-height: 1.4em;*/
+/*}*/
+
+
+/*Dashboard*/
+
+/*.dashboard-header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+
+/*.dashboard-alerts {*/
+/*    margin-left: 50px;*/
+/*    width: 70%;*/
+/*}*/
+/*.alert-item {*/
+/*    padding: 10px;*/
+/*    margin-bottom: 15px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+/*.alert-item span {*/
+/*    margin-left: 15px;*/
+/*}*/
+.alert-info {
+    background: #fff;
+    border: 1px dashed deepskyblue;
+    color: deepskyblue;
+}
+
+/*.alert-light {*/
+/*    background: #fff;*/
+/*    border: 1px dashed yellowgreen;*/
+/*    color: yellowgreen;*/
+/*}*/
+
+.icon-plus-square {
+    font-size: 3.5rem;
+}
+
+.dashboard-content {
+    margin-top: 20px;
+}
+.dashboard-content-title {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.dashboard-content-title span {
+    color: forestgreen;
+}
+
 
 .noMarkLi{
     list-style-type: none;
