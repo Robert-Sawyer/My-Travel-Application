@@ -1,14 +1,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: robert
-  Date: 15.04.19
-  Time: 16:10
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page isELIgnored="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+
 <head>
     <title>Rejestracja</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -22,12 +16,18 @@
 
 </head>
 <body>
-<div class="bodyContainer">
-    <jsp:include page="header.jsp"></jsp:include>
-    <div class="pageContainer">
+
+<div class="pageContainer">
+
+    <div class="pageHeader">
+        <jsp:include page="header.jsp"/>
+    </div>
+
+    <div class="pageContent">
         <div class="registerPageTitle">
             <h2>REJESTRACJA</h2>
         </div>
+
         <div class="formContainer">
 
             <form:form modelAttribute="registrationForm" method="post">
@@ -43,7 +43,11 @@
             </form:form>
         </div>
     </div>
-    <jsp:include page="footer.jsp"></jsp:include>
+
+    <div class="pageFooter">
+        <jsp:include page="footer.jsp"/>
+    </div>
+
 </div>
 </body>
 </html>

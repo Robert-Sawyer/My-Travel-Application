@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<footer id="siteFooter">
-    <div id="copyright">
-        <p id="copyrightPar">SuperTrampTravel © Copyright Wszystkie prawa zastrzeżone</p>
+<footer>
+    <div id="footerContainer">
+        <p id="copyright">SuperTrampTravel © Copyright Wszystkie prawa zastrzeżone</p>
         <div id="links">
             <ul id="socialMediaList">
                 <li class="socialMediaItem">
@@ -26,7 +26,7 @@
                 <li class="socialMediaItem">
                     <a class="socialMediaItemLink" href="https://instagram.com" target="_blank">
                         <div class="socialMediaImageContainer">
-                            <img lt="Instagram Classic"
+                            <img alt="Instagram Classic"
                                  src="https://vbmods.rocks/filedata/fetch?type=large&id=6114"/>
                         </div>
                     </a>
@@ -35,4 +35,3 @@
         </div>
     </div>
 </footer>
-
