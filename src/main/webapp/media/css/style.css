@@ -1,25 +1,69 @@
 /*<<< === STRONA GŁÓWNA === >>>*/
 
 .pageContainer {
-    width: 100%;
+    font-family: 'Lato', sans-serif;
 }
 
 .pageContent{
     background-color: antiquewhite;
-    margin-left: 0;
-    /*width: 100%;*/
-    min-width: 980px;
-    position: absolute;
+    /*margin-left: 0;*/
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    /*min-width: 980px;*/
+    /*min-height: 527px;*/
+    /*position: absolute;*/
     top: 108px;
-    height: 100%;
+    /*height: 100%;*/
 }
 
+/*<<< === HEADER === >>>*/
+
+.pageHeader{
+    background-color: khaki;
+    color: #007bff;
+    width: 100%;
+    min-width: 980px;
+    height: 108px;
+    padding: 10px;
+}
+
+#headerLogo{
+    width: 27%;
+    padding: 10px;
+    text-align: center;
+    float: left;
+}
+
+.logoText{
+    font-size: 30px;
+    /*text-align: center;*/
+    /*padding: 15px;*/
+}
+
+#headerMenuContainer{
+    float: left;
+    width: 73%;
+}
+
+#headerMenu{
+    float: right;
+    padding: 10px 70px;
+}
+
+.headerMenuItem{
+    float: left;
+    min-width: 50px;
+    height: 35px;
+    font-size: 25px;
+    padding: 10px 30px;
+
+}
 /*<<< === REJESTRACJA I LOGOWANIE === >>>*/
 
 .registerPageTitle{
     width: 220px;
     height: 80px;
-    margin-top: 15px;
     padding-top: 20px;
     color: indianred;
     /*margin: 0 auto;*/
@@ -30,55 +74,10 @@
 .formContainer{
     width: 230px;
     padding: 10px;
-    border-radius: 20px;
     position: center;
     margin: 0 auto;
 }
 
-/*<<< === HEADER === >>>*/
-
-.pageHeader{
-    background-color: khaki;
-    position: absolute;
-    left: 0;
-    margin-left: 0;
-    width: 100%;
-    min-width: 980px;
-    top: 0;
-    height: 108px;
-}
-
-#headerLogo{
-    width: 27%;
-    margin-left: 0;
-    text-align: center;
-    float: left;
-}
-
-#mainLogo{
-    height: 82px;
-    /*width: 550px;*/
-    /*left: 200px;*/
-}
-
-.logoText{
-    font-size: 30px;
-    position: center;
-    text-align: center;
-    padding-top: 17px;
-}
-
-#headerTopMenu{
-    float: left;
-}
-
-#headerMenuList{
-    list-style: none;
-}
-
-.headerMenuListItem{
-    display: inline-block;
-}
 
 
 /*<<< === FOOTER === >>>*/
@@ -88,20 +87,17 @@
     height: 77px;
     min-width: 980px;
     background-color: rgba(0, 0, 0, 1);
-    bottom: 0;
-    position: absolute;
 }
 
 #footerContainer{
-    /*margin-top: 23px;*/
     height: 100%;
 }
 
 #copyright{
     color: white;
-    margin-top: 23px;
+    padding-top: 23px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -109,7 +105,6 @@
     /*margin-left: calc((100% - 980px) * 0.5);*/
     width: 250px;
     right: 0;
-    top: 26px;
     position: absolute;
 }
 
@@ -118,8 +113,8 @@
 }
 
 .socialMediaItem{
-    width: 21px;
-    height: 21px;
+    width: 18px;
+    height: 18px;
     margin-right: 13px;
     display: inline-block;
 }
@@ -133,24 +128,23 @@
 }
 
 .socialMediaImageContainer img {
-    width: 21px;
-    height: 21px;
     object-fit: cover;
 }
 
 /*<<< === KOKPIT === >>>*/
 
-#dashboardPageContent{
+.dashboardContent{
     top: 108px;
     left: 160px;
     right: 0;
+    float: left;
     /*background-color: antiquewhite;*/
-    margin-left: 0;
-    min-width: 980px;
-    position: absolute;
-    height: 100%;
+    /*margin-left: 0;*/
+    width: 1040px;
+    /*position: absolute;*/
+    height: 527px;
     /*background-image: url(/media/images/P4206675);*/
-    background-size: 100%;
+    /*background-size: 100%;*/
 }
 
 .dashboardMenu {
@@ -188,16 +182,16 @@
     font-weight: bold;
 }
 
-#sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
+.dashboardSidenav {
+    height: 527px;
     width: 160px;
-    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 108px;
-    bottom: 77px;
-    left: 0;
+    position: absolute;
+    /*z-index: 1; */
+    /*top: 108px;*/
+    /*bottom: 77px;*/
+    /*left: 0;*/
     background-color: #000000;
-    overflow-x: hidden; /* Disable horizontal scroll */
+    /*overflow-x: hidden; */
     padding-top: 20px;
     float: left;
 }
