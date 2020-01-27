@@ -196,6 +196,12 @@
     float: left;
 }
 
+.navMenuItem{
+    height: 25px;
+    padding: 10px;
+
+}
+
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
